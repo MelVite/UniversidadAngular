@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class HijoComponent {
   //Diferencias entre un método GET normal de JS y un GETTER de TS
 
-  private titulo = 'Titulo Componente Hijo'; //Este atributo es privado por lo que requiere un método publico para ser mostrado
+  private titulo = 'Titulo Componente Hijo de Getter vs Get'; //Este atributo es privado por lo que requiere un método publico para ser mostrado
 
   //Getter de TypeScript, para mostrarlo no se necesita utilizar () en el html ya que se comporta como una propiedad
   get mostrarTitulo(){

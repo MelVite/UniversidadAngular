@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Property Binding</h2>
+  <br>
+  <p>Property Binding es una técnica que permite enlazar valores de propiedades del componente a propiedades de elementos HTML en la vista.</p>
+  <p>Esto se logra utilizando la sintaxis de corchetes [ ], que enlaza la propiedad de un elemento o componente a una expresión de Angular, permitiendo que los cambios en el valor de la propiedad en el componente se reflejen automáticamente en la vista.</p>
+  <div class="d-flex justify-content-center">
+    <div class="w-50">
+      <div class="mb-3">
+        <label for="inputTexto">Escribe algo:</label>
+        <input id="inputTexto" type="text" (input)="actualizarTexto($event)">
+      </div>
+      <div class="mb-3">
+        <label for="replicaTexto">Texto replicado:</label>
+        <input id="replicaTexto" type="text" [value]="texto" readonly>
+      </div>
+    </div>
+  </div>
+</div>

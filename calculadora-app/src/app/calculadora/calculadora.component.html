@@ -1,1 +1,16 @@
-<p>calculadora works!</p>
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="w-25">
+      <div class="mb-3 d-flex aling-items-center">
+        <label for="numeroA" class="form-label me-2 text-nowrap">Numero A:</label>
+        <input type="number" class="form-control text-center" [(ngModel)]="numeroA">
+      </div>
+      <div class="mb-3 d-flex aling-items-center">
+        <label for="numeroB" class="form-label me-2 text-nowrap">Numero B:</label>
+        <input type="number" class="form-control text-center" [(ngModel)]="numeroB">
+      </div>
+      <button class="btn btn-primary mb-3 w-100" (click)="sumar()">Sumar</button>
+      <p class="text-center">Resultado: {{ resultado }}</p>
+    </div>
+  </div>
+</div>

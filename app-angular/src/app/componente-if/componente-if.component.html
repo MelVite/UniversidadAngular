@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <h2> {{ subtitulo }}</h2>
+  <p>La directiva {{ arroba }}if es una forma de manejar el flujo condicional en las plantillas de Angular.</p>
+  <p>Permite mostrar u ocultar partes de la interfaz de usuario dependiendo de si una condición es VERDADERA o FALSA.</p>
+  <div class="mt-5 text-center">
+    <h3>Estatus de Autenticación</h3>
+
+    <!--Ciclo if para mostrar los mensajes dependiendo de la autenticación-->
+    @if(isAutenticado) {
+      <p class="text-success">Estás autenticado *3*</p>
+    } @else {
+      <p class="text-danger">¡No estás autenticado!</p>
+    }
+
+    <!--Botón para alternar el estado de autenticado del usuario-->
+    <button class="btn btn-primary mt-3" (click)="cambiarAutentificacion()">Alternar Estado de Autenticación</button>
+</div>

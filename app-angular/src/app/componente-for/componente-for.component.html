@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <h2>Directiva {{arroba}}for</h2>
+  <p>La directiva {{arroba}} nos permite iterar sobre colecciones directamente en la plantilla HTML.</p>
+  <p>Se integra muy bien con los bloques de control de flujo {{arroba}}if y {{arroba}}else permitiendo la generación dinámica de contenido en la plantilla según los elementos de una colección.</p>
+  <div class="mt-5">
+    <h3>Lista de Tareas</h3>
+    <ul class="list-group w-50 mx-auto">
+      <!--Iteramos cada elemento con @for, al iterar los elementos de una colección es necesario indicar un elemento/id que controle la ietaración de cada elemento de la colección, en este caso se utiliza la palabra 'track' seguida del elemento que en este caso es tarea-->
+      @for(tarea of tareas; track tarea){
+        <li class="list-group-item text-center">{{tarea}}</li>
+      }
+    </ul>
+
+    <!--Input para agregar tarea-->
+    <div class="mt-3 d-flex justify-content-center">
+      <input type="text" #tareaInput class="form-control mb-2 w-50" placeholder="Escribe una tarea">
+    </div>
+
+    <!--Botón para agregar tarea-->
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary mt-2 w-50" (click)="agregarTarea(tareaInput.value); tareaInput.value='' "> <!--En el método se agrega el valor del input-text y para limpiar el input-->
+        Agregar Tarea
+      </button>
+    </div>
+  </div>
+</div>

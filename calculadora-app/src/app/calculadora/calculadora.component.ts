@@ -9,5 +9,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './calculadora.component.scss'
 })
 export class CalculadoraComponent {
+numeroA: number = 0;
+numeroB: number = 0;
+resultado: number = 0;
+
+  sumar() {
+    this.resultado = this.numeroA + this.numeroB;
+  }
 
 }
